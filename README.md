@@ -64,3 +64,9 @@ Given I am in the application
  When I enter "<My name> -> The clouds in the sky are amazing!" at the prompt
  Then I should see "The clouds in the sky are amazing!" posted to my wall feed.
 ```
+
+## Go!
+
+Your task is to implement the behaviors defined above in a terminal/command prompt application.  
+
+You are required to use test-driven development through the practice of "red, green, refactor".
