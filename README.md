@@ -15,26 +15,52 @@ User stories relate directly back to a value story, and several user stories may
 
 For this kata, we will focus on two value stories.
 
-> As a social network user
-> I want to be able to read my friends posts 
-> So that I can stay updated on their happenings.
+```
+Reading My Friends Posts.
+
+    As a social network user
+    I want to be able to read my friends posts 
+    So that I can stay updated on their happenings.
+```
 
 And...
 
-> As a social network user
-> I want to be able to post a message
-> So that my friends can stay updated on my happenings.
+```
+Creating My Own Posts.
+
+    As a social network user
+    I want to be able to post a message
+    So that my friends can stay updated on my happenings.
+```
 
 ### The User Stories
 
-> Given I am in the application
-> And "Bob" is another social media user
-> When I enter "Bob wall" at the prompt
-> Then I should become subscribed to Bob's post feed.
+These are the user stories.
 
-> Given I am in the application
-> And I am subscribed to "Bob"
-> When I enter "Bob" at the promptw
-> Then I should see his or her post feed
-
-(Need to add more AC)
+#### Stories for "Read My Friends Posts"
+```
+Given I am in the application
+  And Bob is another person on the social network
+ When I enter "Bob's wall" at the prompt
+ Then I should see Bob's ten most recent messages
+```
+```
+Given I am in the application
+  And Bob is another person on the social network
+ When I enter "<My name> follows Bob" at the prompt
+ Then I should be subscribed to Bob's wall feed.
+```
+```
+Given I am in the application
+  And I am subscribed to Bob and Sonya
+  And Bob has posted several messages
+  And Sonya has posted several messages
+ When I enter "Latest wall posts"
+ Then I should see a list of the last five messages from each of the wall feeds that I am subscribed to.
+```
+#### Stories for "Creating My Own Posts"
+```
+Given I am in the application
+ When I enter "<My name> -> The clouds in the sky are amazing!" at the prompt
+ Then I should see "The clouds in the sky are amazing!" posted to my wall feed.
+```
